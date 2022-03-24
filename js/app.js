@@ -2,12 +2,13 @@
 // Referencias de jQuery
 
 var url = window.location.href;
-var swLocation = '/twittor/sw.js';
-if(navigator.serviceWorker)
-{
-    if(url.includes('localhost'))
-        swLocation='/sw.js'
-    navigator.serviceWorker.register(swLocation)
+var swLocation = '/Twittor/sw.js';
+ 
+if ( navigator.serviceWorker ) {
+    if ( url.includes('localhost') ) {
+        swLocation = '/sw.js';
+    }
+    navigator.serviceWorker.register( swLocation );
 }
 var titulo      = $('#titulo');
 var nuevoBtn    = $('#nuevo-btn');
